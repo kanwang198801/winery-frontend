@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import { Row, Col, Divider } from 'antd';
+import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import { LoadingOutlined } from '@ant-design/icons';
 import Theme from "../components/Theme";

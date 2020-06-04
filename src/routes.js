@@ -8,7 +8,7 @@ const Index = () => (
     <Route render={({ location }) => (
         <Switch location={location}>
             <Route path="/" component={Wines} key="Wines" exact={true} />
-            <Route path="/wine/:id" component={Wine} key="Wine" exact={true} />
+            <Route path="/wine/:lotCode" component={Wine} key="Wine" exact={true} />
             <Route path="" component={NotFoundPage} />
         </Switch>
     )} />

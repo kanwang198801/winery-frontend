@@ -40,7 +40,7 @@ function Wines() {
                 <title>Wines</title>
                 <meta name="description" content="Wines" />
             </Helmet>
-            <Divider>Wines List</Divider>
+            <h1>Wines List</h1>
             <Search onSearchChange={onSearchChange} placeholder="Search wines by name or description" />
             {!loading ?
                 wines.length > 0 &&

@@ -12,6 +12,8 @@ function Wine(props) {
     const [loading, setLoading] = useState(true);
     const [wine, setWine] = useState(null);
     const lotCode = props.match.params.lotCode;
+    let yearBreakDownData, varietyBreakdownData,
+        regionBreakdownData, yearAndVarietyBreakdownData = [];
 
     useEffect(() => {
         setWine(MockData.find(wine => wine.lotCode === lotCode));
@@ -51,10 +53,13 @@ function Wine(props) {
         return breakdownData;
     };
 
-    const yearBreakDownData = getBreakDownData(lotCode, "year").breakdown;
-    const varietyBreakdownData = getBreakDownData(lotCode, "variety").breakdown;
-    const regionBreakdownData = getBreakDownData(lotCode, "region").breakdown;
-    const yearAndVarietyBreakdownData = getBreakDownData(lotCode, "year", "variety").breakdown;
+    if (wine) {
+        yearBreakDownData = getBreakDownData(lotCode, "year").breakdown;
+        varietyBreakdownData = getBreakDownData(lotCode, "variety").breakdown;
+        regionBreakdownData = getBreakDownData(lotCode, "region").breakdown;
+        yearAndVarietyBreakdownData = getBreakDownData(lotCode, "year", "variety").breakdown;
+    }
+
     return (
         <Theme>
             <Helmet>
@@ -149,9 +154,8 @@ function Wine(props) {
                             )}
                         />
                     </>
-                    :
-                    <LoadingOutlined style={{ fontSize: '36px' }} />
-                : <p>Wine is not found</p>
+                    : <p>Wine is not found</p>
+                : <LoadingOutlined style={{ fontSize: '36px' }} />
             }
         </Theme >
     );

@@ -2,10 +2,10 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'antd';
 
-function WineCard({ dataSource }) {
+function WineCard({ dataSource, title }) {
     return (
         <>
-            <h3><strong>Year + Variety</strong></h3>
+            <h3><strong>{title}</strong></h3>
             <List
                 itemLayout="vertical"
                 size="large"
@@ -30,4 +30,5 @@ export default WineCard;
 
 WineCard.propTypes = {
     dataSource: PropTypes.array.isRequired,
+    title: PropTypes.string.isRequired,
 };

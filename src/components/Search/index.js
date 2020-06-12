@@ -5,16 +5,16 @@ import PropTypes from 'prop-types';
 
 const { Search } = Input;
 export default function SearchWines({ onSearchChange, placeholder }) {
-    return (
-        <Search
-            placeholder={placeholder}
-            type='search'
-            onChange={onSearchChange}
-        />
-    );
+   return (
+      <Search
+         placeholder={placeholder}
+         type='search'
+         onChange={onSearchChange}
+      />
+   );
 }
 
 SearchWines.propTypes = {
-    onSearchAllChange: PropTypes.func,
-    placeholder: PropTypes.string,
+   onSearchAllChange: PropTypes.func,
+   placeholder: PropTypes.string,
 };

@@ -1,7 +1,7 @@
-Install project
+###  Install
 
-## `yarn`
+yarn
 
-Run project
+### Run project
 
-## `yarn start`
+yarn start

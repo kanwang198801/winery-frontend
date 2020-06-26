@@ -81,7 +81,6 @@ function Wine(props) {
                <Divider />
                <Descriptions title='Wine Information' bordered>
                   <Descriptions.Item label='Lot code'>
-                     {' '}
                      {wine.lotCode}
                   </Descriptions.Item>
                   {wine.description && (
